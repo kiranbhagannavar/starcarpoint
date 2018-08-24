@@ -65,10 +65,10 @@
                     </a>
                     <hr />
                     <h3>Santosh's Data</h3>
-                    <a href="expenses.php">
+                    <a href="santoshexpenses.php">
                         <input type="button" name="button" value="Expenses" />
                     </a>
-                    <a href="bill.php">
+                    <a href="santoshbill.php">
                         <input type="button" name="button" value="Bill" />
                     </a>
                     </center>
