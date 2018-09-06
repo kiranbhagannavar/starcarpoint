@@ -51,7 +51,7 @@
 				<!-- end of slider -->
 				<!-- main -->
 				<div class="main" style="padding-bottom: 10px;">
-                <a href="viewexpenses.php"><input type="button" name="button" value="View Expenses" /></a>
+                <a href="santoshviewexpenses.php"><input type="button" name="button" value="View Expenses" /></a>
 
                 <?php 
                                                 if(isset ($_GET['msg'])){
@@ -68,7 +68,7 @@
                                                 ?>
 
 
-                <form name="f" method="POST" action="submitexpenses.php">
+                <form name="f" method="POST" action="santoshsubmitexpenses.php">
                             <table cellspacing="12px;">
                                 <h3>
                                     <font color="maroon">Daily Expenses</font>
