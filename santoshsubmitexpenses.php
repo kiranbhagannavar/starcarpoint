@@ -1,10 +1,10 @@
 <?php 
 include 'dbconnection.php';
-    $query="INSERT INTO expenses(cause, amount, date, doc) VALUES('{$_POST['cause']}', '{$_POST['amount']}', '{$_POST['date']}','{$_POST['doc']}')";
+    $query="INSERT INTO santoshexpenses(cause, amount, date, doc) VALUES('{$_POST['cause']}', '{$_POST['amount']}', '{$_POST['date']}','{$_POST['doc']}')";
                     $result = mysql_query($query);
                     if($result){
-                        header('Location:expenses.php?msg=1');	
+                        header('Location:santoshexpenses.php?msg=1');	
                     }else{
-                        header('location:expenses.php?msg=2');
+                        header('location:santoshexpenses.php?msg=2');
                     }
 ?>

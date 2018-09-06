@@ -56,7 +56,7 @@
     </tr>
     <?php
         include 'dbconnection.php';
-        $query="SELECT * FROM bills";
+        $query="SELECT * FROM santoshbills";
         $result=mysql_query($query);
         while($row=  mysql_fetch_assoc($result)) {
             echo "<tr>
@@ -70,7 +70,7 @@
             <td>{$row['vehicle_name']}</td>
             <td>{$row['vehicle_no']}</td>
             <td>{$row['service_type']}</td>
-            <td><a href='printbill.php?bill_id={$row['bill_id']}'>View</a></td>
+            <td><a href='santoshprintbill.php?bill_id={$row['bill_id']}'>View</a></td>
             </tr>";
         }
     ?> 

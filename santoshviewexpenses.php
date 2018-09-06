@@ -50,7 +50,7 @@
     </tr>
     <?php
         include 'dbconnection.php';
-        $query="SELECT * FROM expenses";
+        $query="SELECT * FROM santoshexpenses";
         $result=mysql_query($query);
         while($row=  mysql_fetch_assoc($result)) {
             echo "<tr>
