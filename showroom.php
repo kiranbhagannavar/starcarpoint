@@ -63,6 +63,9 @@
                     <a href="bill.php">
                         <input type="button" name="button" value="Bill" />
                     </a>
+                    <a href="aniltally.php">
+                        <input type="button" name="button" value="Tally" />
+                    </a>
                     <hr />
                     <h3>Santosh's Data</h3>
                     <a href="santoshexpenses.php">
@@ -70,6 +73,9 @@
                     </a>
                     <a href="santoshbill.php">
                         <input type="button" name="button" value="Bill" />
+                    </a>
+                    <a href="santoshtally.php">
+                        <input type="button" name="button" value="Tally" />
                     </a>
                     </center>
                 </div>
