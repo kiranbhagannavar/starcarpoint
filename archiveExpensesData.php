@@ -15,18 +15,6 @@
 	<![endif]-->
 	<script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
 	<script src="js/functions.js" type="text/javascript"></script>
-	<style>
-        input[type=button] {
-            background-color: red;
-            border: none;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            margin: 4px 2px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
 	<!-- wraper -->
@@ -62,7 +50,7 @@
     </tr>
     <?php
         include 'dbconnection.php';
-        $query="SELECT * FROM expenses";
+        $query="SELECT * FROM archiveexpenses";
         $result=mysql_query($query);
         while($row=  mysql_fetch_assoc($result)) {
             echo "<tr>
@@ -76,14 +64,12 @@
     ?> 
 </table>
 		<?php
-			$q = "SELECT SUM(amount) AS amount FROM expenses";
+			$q = "SELECT SUM(amount) AS amount FROM archiveexpenses";
 			$result = mysql_query($q);
 			$row = mysql_fetch_assoc($result);
 			$sum = $row['amount'];
 			echo "<center><h2>Total Expenses Amount: <font color='blue'>&#8377; $sum/-</font> </h2> </center>";
 		?>
-		<a href="closeexpenses.php"><input type="button" name="button" value="Close Weekly Expenses" /></a>
-
 				</div>
 				<?php
 					include ("footer.html");

@@ -15,18 +15,6 @@
 	<![endif]-->
 	<script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
 	<script src="js/functions.js" type="text/javascript"></script>
-	<style>
-        input[type=button] {
-            background-color: red;
-            border: none;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            margin: 4px 2px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
 	<!-- wraper -->
@@ -51,38 +39,49 @@
 				<!-- end of slider -->
 				<!-- main -->
 				<div class="main" style="padding-bottom: 10px;">
-                    <center><h1 style="padding:10px;">💵 Expenses Details 💵</h1></center>
+                    <center><h1 style="padding:10px;"> Bill Details </h1></center>
                 <table border="2" width="100%" style="padding:10px;">
     <tr align="center">
-        <th>Expense ID</th>
-        <th>Cause Of expense</th>
+        <th>Bill ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile Number</th>
+        <th>E-mail ID</th>
+        <th>Date of Service</th>
         <th>Amount</th>
-        <th>Date</th>
-        <th>Document</th>
+        <th>Vehicle Name</th>
+        <th>Vehicle No.</th>
+        <th>Type of Service</th>
+        <th>Action</th>
     </tr>
     <?php
         include 'dbconnection.php';
-        $query="SELECT * FROM expenses";
+        $query="SELECT * FROM santosharchivebills";
         $result=mysql_query($query);
         while($row=  mysql_fetch_assoc($result)) {
             echo "<tr>
-            <td align='center'>{$row['ex_no']}</td>
-            <td>{$row['cause']}</td>
+            <td align='center'>{$row['bill_id']}</td>
+            <td>{$row['name']}</td>
+            <td>{$row['address']}</td>
+            <td>{$row['mob_no']}</td>
+            <td>{$row['email']}</td>
+            <td>{$row['date_of_service']}</td>
             <td>{$row['amount']}</td>
-            <td>{$row['date']}</td>
-            <td><a href='{$row['doc']}'>{$row['doc']}</a></td>
+            <td>{$row['vehicle_name']}</td>
+            <td>{$row['vehicle_no']}</td>
+            <td>{$row['service_type']}</td>
+            <td><a href='printbill.php?bill_id={$row['bill_id']}'>View</a></td>
             </tr>";
-		}
+        }
     ?> 
 </table>
-		<?php
-			$q = "SELECT SUM(amount) AS amount FROM expenses";
+<?php
+			$q = "SELECT SUM(amount) AS amount FROM santosharchivebills";
 			$result = mysql_query($q);
 			$row = mysql_fetch_assoc($result);
 			$sum = $row['amount'];
-			echo "<center><h2>Total Expenses Amount: <font color='blue'>&#8377; $sum/-</font> </h2> </center>";
+			echo "<center><h2>Total bills Amount: <font color='blue'>&#8377; $sum/-</font> </h2> </center>";
 		?>
-		<a href="closeexpenses.php"><input type="button" name="button" value="Close Weekly Expenses" /></a>
 
 				</div>
 				<?php
