@@ -63,6 +63,13 @@
         }
     ?> 
 </table>
+<?php
+			$q = "SELECT SUM(amount) AS amount FROM santoshexpenses";
+			$result = mysql_query($q);
+			$row = mysql_fetch_assoc($result);
+			$sum = $row['amount'];
+			echo "<center><h2>Total Expenses Amount: <font color='blue'>&#8377; $sum/-</font> </h2> </center>";
+		?>
 
 				</div>
 				<?php
