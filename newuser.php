@@ -142,7 +142,7 @@
                                                 ?>
 
                         <form name="f" method="POST" action="regcust.php">
-                            <table cellspacing="12px;">
+                            <table cellspacing="12px;" class="table-responsive">
                                 <h3>
                                     <font color="maroon">Customer Registration</font>
                                 </h3>
