@@ -94,8 +94,6 @@
 			$sum = $row['amount'];
 			echo "<center><h2>Total bills Amount: <font color='blue'>&#8377; $sum/-</font> </h2> </center>";
 		?>
-		<a href="closebills.php"><input type="button" name="button" value="Close Weekly Bills" /></a>
-
 				</div>
 				<?php
 					include ("footer.html");

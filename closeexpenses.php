@@ -12,7 +12,7 @@
     $r = mysql_query($q1);
 
     if($r) {
-        header('Location: viewexpenses.php');
+        header('Location: analytics.php');
     } else {
         echo "Error in deleting";
     }

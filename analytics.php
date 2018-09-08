@@ -20,6 +20,18 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style>
+        input[type=button] {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,6 +88,9 @@
 								$anilprofit = $anilbills - $anilexpenses;
 								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $anilprofit  /-</font> </h4> </center>";
 							?>
+							<a href="closeexpenses.php"><input type="button" name="button" value="Close Weekly Expenses" /></a>
+							<a href="closebills.php"><input type="button" name="button" value="Close Weekly Bills" /></a>
+
 						</div>
 					</div>
 					<div class="card text-white bg-dark mb-4">
@@ -101,6 +116,9 @@
 								$santoshprofit = $santoshbills - $santoshexpenses;
 								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $santoshprofit /-</font> </h4> </center>";
 							?>
+							<a href="santoshcloseexpenses.php"><input type="button" name="button" value="Close Weekly Expenses" /></a>
+							<a href="santoshclosebills.php"><input type="button" name="button" value="Close Weekly Bills" /></a>
+
 						</div>
 					</div>
 					
