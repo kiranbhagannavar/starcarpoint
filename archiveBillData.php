@@ -40,7 +40,7 @@
 				<!-- main -->
 				<div class="main" style="padding-bottom: 10px;">
                     <center><h1 style="padding:10px;"> Bill Details </h1></center>
-                <table border="2" width="100%" style="padding:10px;">
+                <table border="2" width="100%" style="padding:10px;" class="table table-responsive">
     <tr align="center">
         <th>Bill ID</th>
         <th>Name</th>
