@@ -43,7 +43,7 @@
 				<?php
 					include ("nav.html");
 				?>
-
+				
 				<!-- end of slider -->
 				<!-- main -->
 				<div class="main" style="padding-bottom: 10px;">
@@ -54,26 +54,64 @@
 					</center>
 
 					<div class="card text-white bg-dark mb-4">
-						<div class="card-header">Anil's Expenditure</div>
+						<div class="card-header">Anil</div>
 						<div class="card-body">
-							<h5 class="card-title">All over Expenditure</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM expenses";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$anilexpenses = $row['amount'];
+								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $anilexpenses /-</font> </h4> </center>";
+							?>
+							<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM bills";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$anilbills = $row['amount'];
+								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $anilbills /-</font> </h4> </center>";
+							?>
+							<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(profit) AS amount FROM aniltally";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$anilprofit = $row['amount'];
+								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $anilprofit /-</font> </h4> </center>";
+							?>
 						</div>
 					</div>
 					<div class="card text-white bg-dark mb-4">
-						<div class="card-header">Santosh's Expenditure</div>
+						<div class="card-header">Santosh</div>
 						<div class="card-body">
-							<h5 class="card-title">All over Expenditure</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM santoshexpenses";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$anilexpenses = $row['amount'];
+								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $anilexpenses /-</font> </h4> </center>";
+							?>
+							<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM santoshbills";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$anilbills = $row['amount'];
+								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $anilbills /-</font> </h4> </center>";
+							?>
+							<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(profit) AS amount FROM santoshtally";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$anilprofit = $row['amount'];
+								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $anilprofit /-</font> </h4> </center>";
+							?>
 						</div>
 					</div>
-					<div class="card text-white bg-dark mb-4">
-						<div class="card-header">Company Expenditure</div>
-						<div class="card-body">
-							<h5 class="card-title">All over Expenditure</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<?php
