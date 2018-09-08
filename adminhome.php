@@ -47,70 +47,12 @@
 				<!-- end of slider -->
 				<!-- main -->
 				<div class="main" style="padding-bottom: 10px;">
-					<center>
-						<h1>Analytical Data for Star Car Point🚗
-							<br />
+				<center>
+						<h1>🚗 Welcome to Star Car Point 🚗
+							<br /><br /><br /><br/><br/><br/>
+							<br /><br /><br />
 						</h1>
 					</center>
-
-					<div class="card text-white bg-dark mb-4">
-						<div class="card-header">Anil</div>
-						<div class="card-body">
-							<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(amount) AS amount FROM expenses";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$anilexpenses = $row['amount'];
-								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $anilexpenses /-</font> </h4> </center>";
-							?>
-							<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(amount) AS amount FROM bills";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$anilbills = $row['amount'];
-								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $anilbills /-</font> </h4> </center>";
-							?>
-							<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(profit) AS amount FROM aniltally";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$anilprofit = $row['amount'];
-								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $anilprofit /-</font> </h4> </center>";
-							?>
-						</div>
-					</div>
-					<div class="card text-white bg-dark mb-4">
-						<div class="card-header">Santosh</div>
-						<div class="card-body">
-						<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(amount) AS amount FROM santoshexpenses";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$anilexpenses = $row['amount'];
-								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $anilexpenses /-</font> </h4> </center>";
-							?>
-							<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(amount) AS amount FROM santoshbills";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$anilbills = $row['amount'];
-								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $anilbills /-</font> </h4> </center>";
-							?>
-							<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(profit) AS amount FROM santoshtally";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$anilprofit = $row['amount'];
-								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $anilprofit /-</font> </h4> </center>";
-							?>
-						</div>
-					</div>
 					
 				</div>
 			</div>
