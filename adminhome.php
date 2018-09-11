@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
 	<title>Welcome To Star Car Point | Admin Home</title>
 	<link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+	<!-- <link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> -->
+	<!-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" /> -->
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
 	<!--[if lt IE 9]>
@@ -20,51 +20,39 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style>
+		section {
+			padding: 2em;
+		}
+		.bg-gray {
+			background-color:#cccccc;
+		}
+	</style>
 </head>
 
 <body>
-	<!-- wraper -->
-	<div id="wrapper">
-		<!-- shell -->
-		<div class="shell">
-			<!-- container -->
-			<div class="container">
-				<!-- header -->
-				<header id="header">
-					<h1 id="">
-						<a href="#"></a>
-					</h1>
-					<!-- search -->
-
-					<!-- end of search -->
-				</header>
-				<!-- end of header -->
-				<!-- navigation -->
-				<?php
-					include ("nav.html");
-				?>
-				
-				<!-- end of slider -->
-				<!-- main -->
-				<div class="main" style="padding-bottom: 10px;">
-				<center>
-						<h1>🚗 Welcome to Star Car Point 🚗
-							<br /><br /><br /><br/><br/><br/>
-							<br /><br /><br />
-						</h1>
-					</center>
-					
-				</div>
-			</div>
+	<section class="bg-primary">
+		<div class="container">
 			<?php
-					include ("footer.html");
-				?>
+				include ("nav.html");
+			?>
 		</div>
-		<!-- end of container -->
-	</div>
-	<!-- end of shell -->
-	</div>
-	<!-- end of wrapper -->
+	</section>
+	
+	<section>
+		<div class="container">
+			<center><h1>🚗 Welcome to Star Car Point 🚗</h1></center>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</div>
+	</section>
+
+	<section class="bg-gray text-center">
+		<div class="container">
+			<?php
+				include ("footer.html");
+			?>
+		</div>
+	</section>
 </body>
 
 </html>
