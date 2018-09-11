@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
     <title>Welcome To Star Car Point | Admin Home</title>
     <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 
     <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
@@ -16,7 +14,7 @@
 	<![endif]-->
     <script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
     <script src="js/functions.js" type="text/javascript"></script>
-    <style>
+    <!-- <style>
         input[type=button] {
             background-color: #4CAF50;
             border: none;
@@ -27,67 +25,59 @@
             cursor: pointer;
             font-size: 30px;
         }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
 </head>
 
 <body>
-    <!-- wraper -->
-    <div id="wrapper">
-        <!-- shell -->
-        <div class="shell">
-            <!-- container -->
-            <div class="container">
-                <!-- header -->
-                <header id="header">
-                    <h1 id="">
-                        <a href="#"></a>
-                    </h1>
-                    <!-- search -->
-
-                    <!-- end of search -->
-                </header>
-                <!-- end of header -->
-                <!-- navigation -->
-                <?php
-					include ("nav.html");
-				?>
-
-                <!-- end of slider -->
-                <!-- main -->
-                <div class="main" style="padding-bottom: 10px;">
-                    <center>
-                        <h3>Anil's Data</h3>
-                    <a href="expenses.php">
-                        <input type="button" name="button" value="Expenses" />
-                    </a>
-                    <a href="bill.php">
-                        <input type="button" name="button" value="Bill" />
-                    </a>
-                    <a href="aniltally.php">
-                        <input type="button" name="button" value="Tally" />
-                    </a>
-                    <hr />
-                    <h3>Santosh's Data</h3>
-                    <a href="santoshexpenses.php">
-                        <input type="button" name="button" value="Expenses" />
-                    </a>
-                    <a href="santoshbill.php">
-                        <input type="button" name="button" value="Bill" />
-                    </a>
-                    <a href="santoshtally.php">
-                        <input type="button" name="button" value="Tally" />
-                    </a>
-                    </center>
-                </div>
-                <?php
-					include ("footer.html");
-				?>
-            </div>
-            <!-- end of container -->
+    <!-- header starts -->
+    <section class="bg-primary">
+        <div class="container">
+            <?php
+				include ("nav.html");
+			?>
         </div>
-        <!-- end of shell -->
-    </div>
-    <!-- end of wrapper -->
-</body>
+    </section>
+    <!-- header ends -->
 
+    <!-- main body starts -->
+    <section class="bg-form">
+        <div class="container">
+            <center>
+                <h3>Anil's Data</h3>
+                <a href="expenses.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses" />
+                </a>
+                <a href="bill.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Bill" />
+                </a>
+                <a href="aniltally.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Tally" />
+                </a>
+                <hr />
+                <h3>Santosh's Data</h3>
+                <a href="santoshexpenses.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses" />
+                </a>
+                <a href="santoshbill.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Bill" />
+                </a>
+                <a href="santoshtally.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Tally" />
+                </a>
+            </center>
+        </div>
+    </section>
+    <!-- main body ends -->
+
+    <!-- footer starts -->
+    <section class="bg-gray text-center">
+        <div class="container">
+            <?php
+				include ("footer.html");
+			?>
+        </div>
+    </section>
+    <!-- footer ends -->
+</body>
 </html>

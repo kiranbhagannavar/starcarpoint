@@ -26,16 +26,8 @@
             font-size: 20px;
             float: right;
         }
-		section {
-			padding: 2em;
-		}
-		.bg-gray {
-			background-color:#cccccc;
-		}
-        .bg-form {
-            background-color: #74C2E1;
-        }
     </style>
+	<link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
 </head>
 <script lang="javascript">
     function val() {

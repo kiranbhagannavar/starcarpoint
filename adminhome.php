@@ -20,17 +20,11 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	<style>
-		section {
-			padding: 2em;
-		}
-		.bg-gray {
-			background-color:#cccccc;
-		}
-	</style>
+	<link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
 </head>
 
 <body>
+	<!-- header starts -->
 	<section class="bg-primary">
 		<div class="container">
 			<?php
@@ -38,14 +32,18 @@
 			?>
 		</div>
 	</section>
+	<!-- header ends -->
 	
-	<section>
+	<!-- main body starts -->
+	<section class="bg-form">
 		<div class="container">
 			<center><h1>🚗 Welcome to Star Car Point 🚗</h1></center>
 			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		</div>
 	</section>
+	<!-- main body ends -->
 
+	<!-- footer starts -->
 	<section class="bg-gray text-center">
 		<div class="container">
 			<?php
@@ -53,6 +51,7 @@
 			?>
 		</div>
 	</section>
+	<!-- footer ends -->
 </body>
 
 </html>
