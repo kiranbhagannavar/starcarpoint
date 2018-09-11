@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
     <title>Star Car Point | Add New Customer</title>
     <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 
     <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
@@ -26,6 +24,16 @@
             margin: 4px 2px;
             cursor: pointer;
             font-size: 20px;
+            float: right;
+        }
+		section {
+			padding: 2em;
+		}
+		.bg-gray {
+			background-color:#cccccc;
+		}
+        .bg-form {
+            background-color: #74C2E1;
         }
     </style>
 </head>
@@ -101,121 +109,100 @@
 </script>
 
 <body>
-    <!-- wraper -->
-    <div id="wrapper">
-        <!-- shell -->
-        <div class="shell">
-            <!-- container -->
-            <div class="container">
-                <!-- header -->
-                <header id="header">
-                    <h1 id="">
-                        <a href="#"></a>
-                    </h1>
-                    <!-- search -->
-
-                    <!-- end of search -->
-                </header>
-                <!-- end of header -->
-                <!-- navigation -->
-                <?php
-                    include ("nav.html");
-                ?>
-
-                <!-- end of slider -->
-                <!-- main -->
-                <div class="main">
-                    <a href="viewcust.php"><input type="button" name="button" value="View Customer" /></a>
-                    <section class="cols">
-                        <?php 
-                                                if(isset ($_GET['msg'])){
-                                                    if($_GET['msg']==1){
-                                                            ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <?php
-                                                        echo "<font color='maroon'>Customer created successfully</font>";
-                                                    }else if($_GET['msg']==2){
-                                                    echo "<font color='maroon'>Cannot create your account please try later</font>";
-                                                    }else if($_GET['msg']==3){
-                                                    echo "<font color='maroon'>Something went wrong, please try again later</font>";
-                                                    }
-                                                }
-                                                ?>
-
-                        <form name="f" method="POST" action="regcust.php">
-                            <table cellspacing="12px;" class="table-responsive">
-                                <h3>
-                                    <font color="maroon">Customer Registration</font>
-                                </h3>
-                                <tr>
-                                    <td>Name:</td>
-                                    <td>
-                                        <input name="user" type="text" size="40" maxlength="20" required/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Address:</td>
-                                    <td>
-                                        <textarea name="addr" cols="42" rows="4" required></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Mobile Number </td>
-                                    <td>
-                                        <input name="mob" type="text" size="40" maxlength="10" required/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>E-mail</td>
-                                    <td>
-                                        <input name="email" type="text" size="40" maxlength="50" required/>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Date of Birth</td>
-                                    <td>
-                                        <input type="text" name="dob" size="40" maxlength="50" required />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Occupation</td>
-                                    <td>
-                                        <input type="text" name="occupation" size="40" maxlength="50" required />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Vehicle Name</td>
-                                    <td>
-                                        <input type="text" name="vehicle_name" size="40" maxlength="50" required />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Vehicle Number</td>
-                                    <td>
-                                        <input type="text" name="vehicle_no" size="40" maxlength="50" required />
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <input type="submit" value=" Register " />
-                                    </td>
-                                </tr>
-                            </table>
-                        </form>
-
-                        <!-- end of main -->
-
-                        <?php
-                            include ("footer.html");
-                        ?>
-                </div>
-                <!-- end of container -->
-            </div>
-            <!-- end of shell -->
+    <!-- header starts -->
+    <section class="bg-primary">
+        <div class="container">
+            <?php
+				include ("nav.html");
+			?>
         </div>
-        <!-- end of wrapper -->
+    </section>
+    <!-- header ends -->
+
+    <!-- main body starts -->
+    <section class="bg-form">
+        <div class="container">
+            <a href="viewcust.php"><input type="button" name="button" value="View Customer" /></a>
+            <h3>Customer Registration</h3>
+
+            <section class="cols">
+                <?php 
+                    if(isset ($_GET['msg'])){
+                        if($_GET['msg']==1){
+                                ?>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <?php
+                    echo "<font color='maroon'>Customer created successfully</font>";
+                    }else if($_GET['msg']==2){
+                        echo "<font color='maroon'>Cannot create your account please try later</font>";
+                    }else if($_GET['msg']==3){
+                        echo "<font color='maroon'>Something went wrong, please try again later</font>";
+                    }
+                }
+                ?>
+            </section>
+
+            <!-- form start -->
+            <form name="f" method="POST" action="regcust.php">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="user" class="form-control" placeholder="Enter Name" required />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" rows="3" name="addr" Placeholder="Enter address" required></textarea>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="mobno">Mobile Number</label>
+                    <input type="text" name="mob" class="form-control" placeholder="Enter Mobile Number" required />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="email">Email-ID</label>
+                    <input type="text" name="email" class="form-control" placeholder="Enter Email-id" />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="text" name="dob" class="form-control" placeholder="Enter Date of Birth" />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="occ">Occupation</label>
+                    <input type="text" name="occupation" class="form-control" placeholder="Enter Occupation" required />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="vname">Vehicle Name</label>
+                    <input type="text" name="vehicle_name" class="form-control" placeholder="Enter Vehicle Name"
+                        required />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="vno">Vehicle Number</label>
+                    <input type="text" name="vehicle_no" class="form-control" placeholder="Enter Vehicle Number"
+                        required />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Register" />
+            </form>
+            <!-- form ends -->
+        </div>
+    </section>
+    <!-- main body ends -->
+
+    <!-- footer starts -->
+    <section class="bg-gray text-center">
+        <div class="container">
+            <?php
+				include ("footer.html");
+			?>
+        </div>
+    </section>
+    <!-- footer ends -->
 </body>
 
 </html>
