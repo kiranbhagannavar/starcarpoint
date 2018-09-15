@@ -59,6 +59,9 @@
                 </a>
                 <hr />
                 <h3>Santosh's Data</h3>
+                <a href="santoshAllInOne.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally" />
+                </a>
                 <a href="santoshexpenses.php">
                     <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses" />
                 </a>
