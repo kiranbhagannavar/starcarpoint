@@ -38,7 +38,7 @@
 	<section class="bg-form">
 		<div class="container">
 			<center>
-				<h1 style="padding:10px;">💵 Expenses Details 💵</h1>
+				<h1 style="padding:10px;">💵 Showroom Expenses Details 💵</h1>
 			</center>
 			<table border="2" width="100%" class="table table-responsive">
 				<tr align="center">

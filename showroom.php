@@ -44,32 +44,14 @@
     <section class="bg-form">
         <div class="container">
             <center>
-                <h3>Anil's Data</h3>
+                <h3>Showroom Data</h3>
                 <a href="anilAllInOne.php">
                     <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally" />
                 </a>
-                <a href="expenses.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses" />
-                </a>
-                <a href="bill.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Bill" />
-                </a>
-                <a href="aniltally.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Tally" />
-                </a>
                 <hr />
-                <h3>Santosh's Data</h3>
+                <h3>Home Service Data</h3>
                 <a href="santoshAllInOne.php">
                     <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally" />
-                </a>
-                <a href="santoshexpenses.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses" />
-                </a>
-                <a href="santoshbill.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Bill" />
-                </a>
-                <a href="santoshtally.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Tally" />
                 </a>
             </center>
         </div>

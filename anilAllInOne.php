@@ -183,6 +183,11 @@
                                     <label for="vno">Vehicle Number</label>
                                     <input type="text" name="vehicle_no" class="form-control" placeholder="Vehicle Number" />
                                 </div>
+                                <hr />
+                                <div class="form-group">
+                                    <label for="tos">Type Of service</label>
+                                    <input type="text" name="service_type" class="form-control" placeholder="Type of Service" />
+                                </div>
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-success" value="Generate Bill" />
                                 </div>

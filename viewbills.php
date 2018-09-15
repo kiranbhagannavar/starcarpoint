@@ -38,7 +38,7 @@
 	<section class="bg-form">
 		<div class="container">
 			<center>
-				<h1 style="padding:10px;"> Bill Details </h1>
+				<h1 style="padding:10px;">Showroom Bill Details </h1>
 			</center>
 			<table border="2" width="100%" style="padding:10px;" class="table table-responsive">
 				<tr align="center">

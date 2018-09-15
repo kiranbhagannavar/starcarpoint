@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
 	<title>Welcome To Star Car Point | Admin Home</title>
 	<link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+	<!-- <link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> -->
+	<!-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" /> -->
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
 	<!--[if lt IE 9]>
@@ -20,55 +20,33 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	<style>
-        input[type=button] {
-            background-color: red;
-            border: none;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            margin: 4px 2px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-    </style>
+	<link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
 </head>
 
 <body>
-	<!-- wraper -->
-	<div id="wrapper">
-		<!-- shell -->
-		<div class="shell">
-			<!-- container -->
-			<div class="container">
-				<!-- header -->
-				<header id="header">
-					<h1 id="">
-						<a href="#"></a>
-					</h1>
-					<!-- search -->
+	<!-- header starts -->
+	<section class="bg-primary">
+		<div class="container">
+			<?php
+				include ("nav.html");
+			?>
+		</div>
+	</section>
+	<!-- header ends -->
 
-					<!-- end of search -->
-				</header>
-				<!-- end of header -->
-				<!-- navigation -->
-				<?php
-					include ("nav.html");
-				?>
-				
-				<!-- end of slider -->
-				<!-- main -->
-				<div class="main" style="padding-bottom: 10px;">
-					<center>
-						<h1>Analytical Data for Star Car Point🚗
-							<br />
-						</h1>
-					</center>
+	<!-- main body starts -->
+	<section class="bg-form">
+		<div class="container">
+			<center>
+				<h1>Analytical Data for Star Car Point🚗
+					<br />
+				</h1>
+			</center>
 
-					<div class="card text-white bg-dark mb-4">
-						<div class="card-header">Anil</div>
-						<div class="card-body">
-							<?php
+			<div class="card mb-4">
+				<div class="card-header">Showroom</div>
+				<div class="card-body">
+					<?php
 								include 'dbconnection.php';
 								$q = "SELECT SUM(amount) AS amount FROM expenses";
 								$result = mysql_query($q);
@@ -76,7 +54,8 @@
 								$anilexpenses = $row['amount'];
 								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $anilexpenses /-</font> </h4> </center>";
 							?>
-							<?php
+							<hr />
+					<?php
 								include 'dbconnection.php';
 								$q = "SELECT SUM(amount) AS amount FROM bills";
 								$result = mysql_query($q);
@@ -84,19 +63,21 @@
 								$anilbills = $row['amount'];
 								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $anilbills /-</font> </h4> </center>";
 							?>
-							<?php
+							<hr />
+					<?php
 								$anilprofit = $anilbills - $anilexpenses;
 								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $anilprofit  /-</font> </h4> </center>";
 							?>
-							<a href="closeexpenses.php"><input type="button" name="button" value="Close Weekly Expenses" /></a>
-							<a href="closebills.php"><input type="button" name="button" value="Close Weekly Bills" /></a>
+							<hr />
+					<a href="closeexpenses.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Expenses" /></a>
+					<a href="closebills.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Bills" /></a>
 
-						</div>
-					</div>
-					<div class="card text-white bg-dark mb-4">
-						<div class="card-header">Santosh</div>
-						<div class="card-body">
-						<?php
+				</div>
+			</div>
+			<div class="card mb-4">
+				<div class="card-header">Home Service</div>
+				<div class="card-body">
+					<?php
 								include 'dbconnection.php';
 								$q = "SELECT SUM(amount) AS amount FROM santoshexpenses";
 								$result = mysql_query($q);
@@ -104,7 +85,8 @@
 								$santoshexpenses = $row['amount'];
 								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $santoshexpenses /-</font> </h4> </center>";
 							?>
-							<?php
+							<hr />
+					<?php
 								include 'dbconnection.php';
 								$q = "SELECT SUM(amount) AS amount FROM santoshbills";
 								$result = mysql_query($q);
@@ -112,27 +94,30 @@
 								$santoshbills = $row['amount'];
 								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $santoshbills /-</font> </h4> </center>";
 							?>
-							<?php
+							<hr />
+					<?php
 								$santoshprofit = $santoshbills - $santoshexpenses;
 								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $santoshprofit /-</font> </h4> </center>";
 							?>
-							<a href="santoshcloseexpenses.php"><input type="button" name="button" value="Close Weekly Expenses" /></a>
-							<a href="santoshclosebills.php"><input type="button" name="button" value="Close Weekly Bills" /></a>
+							<hr />
+					<a href="santoshcloseexpenses.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Expenses" /></a>
+					<a href="santoshclosebills.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Bills" /></a>
 
-						</div>
-					</div>
-					
 				</div>
 			</div>
-			<?php
-					include ("footer.html");
-				?>
 		</div>
-		<!-- end of container -->
-	</div>
-	<!-- end of shell -->
-	</div>
-	<!-- end of wrapper -->
+	</section>
+	<!-- main body ends -->
+
+	<!-- footer starts -->
+	<section class="bg-gray text-center">
+		<div class="container">
+			<?php
+				include ("footer.html");
+			?>
+		</div>
+	</section>
+	<!-- footer ends -->
 </body>
 
 </html>
