@@ -52,12 +52,12 @@
                     }
                 }
                 ?>
-                <?php 
+            <?php 
                 if(isset ($_GET['msg'])){
                     if($_GET['msg']==5){
                             ?>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <?php
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php
                         echo "<font color='maroon'>Bill added successfully</font>";
                     }else if($_GET['msg']==6){
                     echo "<font color='maroon'>Cannot add please try later</font>";
@@ -66,7 +66,32 @@
                     }
                 }
                 ?>
-
+            <?php 
+                                                if(isset ($_GET['msg'])){
+                                                    if($_GET['msg']==8){
+                                                            ?>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php
+                    echo "<font color='maroon'>Tally added successfully</font>";
+                }else if($_GET['msg']==9){
+                echo "<font color='maroon'>Cannot add please try later</font>";
+                }else if($_GET['msg']==10){
+                echo "<font color='maroon'>Something went wrong, please try again later</font>";
+                }
+            }
+            ?>
+            <div class="row justify-content-center align-items-center">
+                <a href="viewexpenses.php">
+                    <input type="button" class="btn btn-warning" value="View Expenses" />
+                </a>&nbsp;
+                <a href="viewbills.php">
+                    <input type="button" class="btn btn-dark" value="View Bills" />
+                </a>&nbsp;
+                <a href="viewAnilTally.php">
+                    <input type="button" class="btn btn-danger" value="View Tally" />
+                </a>
+            </div>
+            <br />
             <div id="accordion">
                 <div class="card">
                     <div class="card-header" id="headingOne">
@@ -136,7 +161,7 @@
                                 <hr />
                                 <div class="form-group">
                                     <label for="email">E-mail ID</label>
-                                    <input type="text" name="text" class="form-control" placeholder="E-mail ID" />
+                                    <input type="text" name="email" class="form-control" placeholder="E-mail ID" />
                                 </div>
                                 <hr />
                                 <div class="form-group">
@@ -176,13 +201,35 @@
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
-                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                            you probably haven't heard of them accusamus labore sustainable VHS.
+                            <form name="f" method="POST" action="submitAnilTally.php">
+                                <div class="form-group">
+                                    <label for="date">Date (from)</label>
+                                    <input type="text" name="datef" class="form-control" placeholder="Date (from)" />
+                                </div>
+                                <hr />
+                                <div class="form-group">
+                                    <label for="datet">Date (To)</label>
+                                    <input type="text" name="datet" class="form-control" placeholder="Date (To)" />
+                                </div>
+                                <hr />
+                                <div class="form-group">
+                                    <label for="bill">Bill</label>
+                                    <input type="text" name="bill" class="form-control" placeholder="Bill" />
+                                </div>
+                                <hr />
+                                <div class="form-group">
+                                    <label for="expense">Expense</label>
+                                    <input type="text" name="expense" class="form-control" placeholder="Expense" />
+                                </div>
+                                <hr />
+                                <div class="form-group">
+                                    <label for="profit">Profit</label>
+                                    <input type="text" name="profit" class="form-control" placeholder="Profit" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-success" value="Submit" />
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -201,5 +248,4 @@
     </section>
     <!-- footer ends -->
 </body>
-
 </html>

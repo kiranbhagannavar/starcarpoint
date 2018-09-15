@@ -24,7 +24,7 @@
 	<!-- header ends -->
 
 	<!-- main body starts -->
-	<section>
+	<section class="bg-form">
 		<div class="container">
 			<center>
 				<h1 style="padding:10px;">👦 Customer Details 👩</h1>
