@@ -45,6 +45,9 @@
         <div class="container">
             <center>
                 <h3>Anil's Data</h3>
+                <a href="anilAllInOne.php">
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally" />
+                </a>
                 <a href="expenses.php">
                     <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses" />
                 </a>
