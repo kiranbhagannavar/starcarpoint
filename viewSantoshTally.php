@@ -72,6 +72,39 @@
 				$sum = $row['amount'];
 				echo "<center><h2>Total Anil's Profit Amount: <font color='blue'>&#8377; $sum/-</font> </h2> </center>";
 			?>
+
+			<div class="card mb-4">
+				<div class="card-header">Home Service Weekly Data</div>
+				<div class="card-body">
+				<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM santoshbills";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$santoshbills = $row['amount'];
+								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $santoshbills /-</font> </h4> </center>";
+							?>
+							<hr />
+					<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM santoshexpenses";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$santoshexpenses = $row['amount'];
+								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $santoshexpenses /-</font> </h4> </center>";
+							?>
+							<hr />
+					
+					<?php
+								$santoshprofit = $santoshbills - $santoshexpenses;
+								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $santoshprofit /-</font> </h4> </center>";
+							?>
+							<hr />
+					<a href="santoshcloseexpenses.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Expenses" /></a>
+					<a href="santoshclosebills.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Bills" /></a>
+
+				</div>
+			</div>
 		</div>
 	</section>
 	<!-- main body ends -->

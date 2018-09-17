@@ -44,8 +44,17 @@
 			</center>
 
 			<div class="card mb-4">
-				<div class="card-header">Showroom</div>
+				<div class="card-header">Showroom Weekly Data</div>
 				<div class="card-body">
+				<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM bills";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$anilbills = $row['amount'];
+								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $anilbills /-</font> </h4> </center>";
+							?>
+							<hr />
 					<?php
 								include 'dbconnection.php';
 								$q = "SELECT SUM(amount) AS amount FROM expenses";
@@ -55,15 +64,7 @@
 								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $anilexpenses /-</font> </h4> </center>";
 							?>
 							<hr />
-					<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(amount) AS amount FROM bills";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$anilbills = $row['amount'];
-								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $anilbills /-</font> </h4> </center>";
-							?>
-							<hr />
+					
 					<?php
 								$anilprofit = $anilbills - $anilexpenses;
 								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $anilprofit  /-</font> </h4> </center>";
@@ -75,8 +76,17 @@
 				</div>
 			</div>
 			<div class="card mb-4">
-				<div class="card-header">Home Service</div>
+				<div class="card-header">Home Service Weekly Data</div>
 				<div class="card-body">
+				<?php
+								include 'dbconnection.php';
+								$q = "SELECT SUM(amount) AS amount FROM santoshbills";
+								$result = mysql_query($q);
+								$row = mysql_fetch_assoc($result);
+								$santoshbills = $row['amount'];
+								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $santoshbills /-</font> </h4> </center>";
+							?>
+							<hr />
 					<?php
 								include 'dbconnection.php';
 								$q = "SELECT SUM(amount) AS amount FROM santoshexpenses";
@@ -86,15 +96,7 @@
 								echo "<center><h4>Total Expenses Amount: <font color='blue'>&#8377; $santoshexpenses /-</font> </h4> </center>";
 							?>
 							<hr />
-					<?php
-								include 'dbconnection.php';
-								$q = "SELECT SUM(amount) AS amount FROM santoshbills";
-								$result = mysql_query($q);
-								$row = mysql_fetch_assoc($result);
-								$santoshbills = $row['amount'];
-								echo "<center><h4>Total Bills Amount: <font color='blue'>&#8377; $santoshbills /-</font> </h4> </center>";
-							?>
-							<hr />
+					
 					<?php
 								$santoshprofit = $santoshbills - $santoshexpenses;
 								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $santoshprofit /-</font> </h4> </center>";
