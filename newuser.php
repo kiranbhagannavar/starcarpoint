@@ -27,7 +27,7 @@
             float: right;
         }
     </style>
-	<link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
 </head>
 <script lang="javascript">
     function val() {
@@ -128,7 +128,7 @@
                     }else if($_GET['msg']==2){
                         echo "<font color='maroon'>Cannot create your account please try later</font>";
                     }else if($_GET['msg']==3){
-                        echo "<font color='maroon'>Something went wrong, please try again later</font>";
+                        echo "<font color='maroon'>Customer already exists</font>";
                     }
                 }
                 ?>
@@ -137,7 +137,19 @@
             <!-- form start -->
             <form name="f" method="POST" action="regcust.php">
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="vno">Vehicle Number</label>
+                    <input type="text" name="vehicle_no" class="form-control" placeholder="Enter Vehicle Number"
+                        required />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="vname">Vehicle Name</label>
+                    <input type="text" name="vehicle_name" class="form-control" placeholder="Enter Vehicle Name"
+                        required />
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label for="name">Owner Name</label>
                     <input type="text" name="user" class="form-control" placeholder="Enter Name" required />
                 </div>
                 <hr />
@@ -158,24 +170,12 @@
                 <hr />
                 <div class="form-group">
                     <label for="dob">Date of Birth</label>
-                    <input type="text" name="dob" class="form-control" placeholder="Enter Date of Birth" />
+                    <input type="text" name="dob" class="form-control" placeholder="Enter Date of Birth" required/>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label for="occ">Occupation</label>
                     <input type="text" name="occupation" class="form-control" placeholder="Enter Occupation" required />
-                </div>
-                <hr />
-                <div class="form-group">
-                    <label for="vname">Vehicle Name</label>
-                    <input type="text" name="vehicle_name" class="form-control" placeholder="Enter Vehicle Name"
-                        required />
-                </div>
-                <hr />
-                <div class="form-group">
-                    <label for="vno">Vehicle Number</label>
-                    <input type="text" name="vehicle_no" class="form-control" placeholder="Enter Vehicle Number"
-                        required />
                 </div>
                 <hr />
                 <div class="form-group">

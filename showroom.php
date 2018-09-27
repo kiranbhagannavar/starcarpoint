@@ -46,12 +46,12 @@
             <center>
                 <h3>Showroom Data</h3>
                 <a href="anilAllInOne.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally" />
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally / Analytics" />
                 </a>
                 <hr />
                 <h3>Home Service Data</h3>
                 <a href="santoshAllInOne.php">
-                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally" />
+                    <input type="button" class="btn btn-danger btn-lg" name="button" value="Expenses / Bill / Tally / Analytics" />
                 </a>
             </center>
         </div>

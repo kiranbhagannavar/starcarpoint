@@ -37,41 +37,6 @@
 	<!-- main body starts -->
 	<section class="bg-form">
 		<div class="container">
-			<center>
-				<h1 style="padding:10px;">💵 Home Service Tally Details 💵</h1>
-			</center>
-			<table border="2" width="100%" class="table table-responsive">
-				<tr align="center">
-					<th>Tally ID</th>
-					<th>Date (from)</th>
-					<th>Date (To)</th>
-					<th>Bill</th>
-					<th>Expense</th>
-					<th>Profit</th>
-				</tr>
-				<?php
-					include 'dbconnection.php';
-					$query="SELECT * FROM santoshtally";
-					$result=mysql_query($query);
-					while($row=  mysql_fetch_assoc($result)) {
-						echo "<tr>
-						<td align='center'>{$row['t_no']}</td>
-						<td>{$row['datef']}</td>
-						<td>{$row['datet']}</td>
-						<td>{$row['bill']}</td>
-						<td>{$row['expense']}</td>
-						<td>{$row['profit']}</td>
-						</tr>";
-					}
-				?>
-			</table>
-			<?php
-				$q = "SELECT SUM(profit) AS amount FROM santoshtally";
-				$result = mysql_query($q);
-				$row = mysql_fetch_assoc($result);
-				$sum = $row['amount'];
-				echo "<center><h2>Total Anil's Profit Amount: <font color='blue'>&#8377; $sum/-</font> </h2> </center>";
-			?>
 
 			<div class="card mb-4">
 				<div class="card-header">Home Service Weekly Data</div>
@@ -100,8 +65,6 @@
 								echo "<center><h4>Total Profit Amount: <font color='blue'>&#8377; $santoshprofit /-</font> </h4> </center>";
 							?>
 							<hr />
-					<a href="santoshcloseexpenses.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Expenses" /></a>
-					<a href="santoshclosebills.php"><input type="button" class="btn btn-lg btn-danger" name="button" value="Close Weekly Bills" /></a>
 
 				</div>
 			</div>

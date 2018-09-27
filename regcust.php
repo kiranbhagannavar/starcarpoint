@@ -1,7 +1,9 @@
 <?php 
 include 'dbconnection.php';
+    $nam = $_POST['name'];
+    $vehiclenumber = $_POST['vehicle_no'];
+    $query="SELECT * FROM tblcustomer WHERE vehicle_no='$vehiclenumber'";
 
-    $query="SELECT * FROM tblcustomer WHERE name='{$_POST['user']}'";
 			$result=mysql_query($query);
 			if(mysql_num_rows($result)>0) {
 				header('location:newuser.php?msg=3');

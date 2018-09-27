@@ -89,6 +89,9 @@
                 </a>&nbsp;
                 <a href="viewAnilTally.php">
                     <input type="button" class="btn btn-danger" value="View Tally" />
+                </a>&nbsp;
+                <a href="analyticLogin.php">
+                    <input type="button" class="btn btn-primary" value="View Analytics" />
                 </a>
             </div>
             <br />
@@ -108,22 +111,22 @@
                             <form name="f" method="POST" action="submitexpenses.php">
                                 <div class="form-group">
                                     <label for="cause">Cause of Expenses</label>
-                                    <input type="text" name="cause" class="form-control" placeholder="Cause of Expense" />
+                                    <input type="text" name="cause" class="form-control" placeholder="Cause of Expense" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="amount">Amount</label>
-                                    <input type="text" name="amount" class="form-control" placeholder="Amount" />
+                                    <input type="text" name="amount" class="form-control" placeholder="Amount" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="date">Date</label>
-                                    <input type="text" name="date" class="form-control" placeholder="Date (Example: 1/1/18)" />
+                                    <input type="text" name="date" class="form-control" placeholder="Date (Example: 1/1/18)" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="doc">Document</label>
-                                    <input type="text" name="doc" class="form-control" placeholder="Document Link" />
+                                    <input type="text" name="doc" class="form-control" placeholder="Document Link" required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-success" value="Submit" />
@@ -146,17 +149,17 @@
                             <form name="submitbill" method="POST" action="submitbill.php">
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Name" />
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <textarea class="form-control" rows="3" name="address" placeholder="Address"></textarea>
+                                    <textarea class="form-control" rows="3" name="address" placeholder="Address" required></textarea>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="name">Mobile Number</label>
-                                    <input type="text" name="mob_no" class="form-control" placeholder="Mobile Number" />
+                                    <input type="text" name="mob_no" class="form-control" placeholder="Mobile Number" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
@@ -166,27 +169,27 @@
                                 <hr />
                                 <div class="form-group">
                                     <label for="dos">Date of Service</label>
-                                    <input type="text" name="date_of_service" class="form-control" placeholder="Date of Service" />
+                                    <input type="text" name="date_of_service" class="form-control" placeholder="Date of Service" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="amount">Amount</label>
-                                    <input type="text" name="amount" class="form-control" placeholder="Amount" />
+                                    <input type="text" name="amount" class="form-control" placeholder="Amount" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="vname">Vehicle Name</label>
-                                    <input type="text" name="vehicle_name" class="form-control" placeholder="Vehicle Name" />
+                                    <input type="text" name="vehicle_name" class="form-control" placeholder="Vehicle Name" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="vno">Vehicle Number</label>
-                                    <input type="text" name="vehicle_no" class="form-control" placeholder="Vehicle Number" />
+                                    <input type="text" name="vehicle_no" class="form-control" placeholder="Vehicle Number" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="tos">Type Of service</label>
-                                    <input type="text" name="service_type" class="form-control" placeholder="Type of Service" />
+                                    <input type="text" name="service_type" class="form-control" placeholder="Type of Service" required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-success" value="Generate Bill" />
@@ -209,27 +212,27 @@
                             <form name="f" method="POST" action="submitAnilTally.php">
                                 <div class="form-group">
                                     <label for="date">Date (from)</label>
-                                    <input type="text" name="datef" class="form-control" placeholder="Date (from)" />
+                                    <input type="text" name="datef" class="form-control" placeholder="Date (from)" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="datet">Date (To)</label>
-                                    <input type="text" name="datet" class="form-control" placeholder="Date (To)" />
+                                    <input type="text" name="datet" class="form-control" placeholder="Date (To)" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
-                                    <label for="bill">Bill</label>
-                                    <input type="text" name="bill" class="form-control" placeholder="Bill" />
+                                    <label for="bill">Total Bill</label>
+                                    <input type="text" name="bill" class="form-control" placeholder="Bill" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
-                                    <label for="expense">Expense</label>
-                                    <input type="text" name="expense" class="form-control" placeholder="Expense" />
+                                    <label for="expense">Total Expense</label>
+                                    <input type="text" name="expense" class="form-control" placeholder="Expense" required/>
                                 </div>
                                 <hr />
                                 <div class="form-group">
-                                    <label for="profit">Profit</label>
-                                    <input type="text" name="profit" class="form-control" placeholder="Profit" />
+                                    <label for="profit">Total Profit</label>
+                                    <input type="text" name="profit" class="form-control" placeholder="Profit" required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-success" value="Submit" />
